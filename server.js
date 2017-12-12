@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.use('/blog-posts', shoppingListRouter);
+app.use('/blog-posts', blogPostRouter);
 
 
 app.listen(process.env.PORT || 8080, () => {
