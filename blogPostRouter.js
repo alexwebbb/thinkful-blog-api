@@ -29,7 +29,7 @@ router.post('/', jsonParser, (req, res) => {
       return res.status(400).send(message);
     }
   }
-  const item = BlogPosts.create(req.body.name, req.body.checked);
+  const item = BlogPosts.create(req.body.title, req.body.content, req.body.author);
   res.status(201).json(item);
 });
 
@@ -63,8 +63,10 @@ router.put('/:id', jsonParser, (req, res) => {
   console.log(`Updating blog post \`${req.params.id}\``);
   const updatedItem = BlogPosts.update({
     id: req.params.id,
-    name: req.body.name,
-    budget: req.body.budget
+    title: req.body.title,
+    content: req.body.content,
+    author: req.body.author,
+    publishDate: req.body.publishDate
   });
   res.status(204).end();
 });
