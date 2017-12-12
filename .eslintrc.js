@@ -3,7 +3,12 @@ module.exports = {
         "browser": true,
         "es6": true
     },
+    // this project requires node, eslint and eslint node plugin
+    "plugins": ["node"],
     "extends": "eslint:recommended",
+    "plugins": [
+        "requirejs"
+    ],
     "rules": {
         "indent": [
             "error",
