@@ -5,21 +5,22 @@ const morgan = require('morgan');
 
 const app = express();
 
-const shoppingListRouter = require('./shoppingListRouter');
+const blogPostRouter = require('./blogPostRouter');
+
 
 // log the http layer
 app.use(morgan('common'));
 
 
-
 app.use(express.static('public'));
+
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
 
-app.use('/shopping-list', shoppingListRouter);
+app.use('/blog-posts', shoppingListRouter);
 
 
 app.listen(process.env.PORT || 8080, () => {
