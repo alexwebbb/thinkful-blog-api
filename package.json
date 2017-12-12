@@ -1,0 +1,19 @@
+{
+  "name": "thinkful-blog-api",
+  "version": "1.0.0",
+  "description": "solution for thinkful restful API challenge",
+  "main": "server.js",
+  "repository": "https://github.com/alexwebbb/thinkful-blog-api.git",
+  "author": "Alex",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "node": "^9.2.0",
+    "uuid": "^3.1.0"
+  },
+  "engines": {
+    "node": "^9.2.0"
+  }
+}
